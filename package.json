@@ -1,13 +1,4 @@
-{
-  "name": "my-portfolio",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "build": "tailwindcss -i ./src/index.css -o ./dist/output.css --minify"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.4.14",
-    "postcss": "^8.4.31",
-    "autoprefixer": "^10.4.16"
-  }
+"scripts": {
+  "build:css": "tailwindcss -i ./src/index.css -o ./dist/output.css --minify",
+  "build": "npm run build:css && cp index.html dist/index.html"
 }
